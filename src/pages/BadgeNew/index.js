@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-    Navbar,
     Header,
     Badge,
     BadgeForm,
@@ -26,8 +25,7 @@ class BadgeNew extends React.Component {
 
     render(){
         return(
-            <div>
-                <Navbar />
+            <React.Fragment>
                 <Header />
                 <div className='container'>
                     <div className='row'>
@@ -48,7 +46,7 @@ class BadgeNew extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }    
 };
