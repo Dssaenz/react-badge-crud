@@ -31,11 +31,11 @@ class BadgeNew extends React.Component {
                     <div className='row'>
                         <div className='col-6'>
                         <Badge 
-                            firstName={this.state.form.firstName}
-                            lastName={this.state.form.lastName}
-                            jobTitle={this.state.form.jobTitle}
-                            email={this.state.form.email}
-                            github={this.state.form.github}
+                            firstName={this.state.form.firstName || 'Nombres'}
+                            lastName={this.state.form.lastName || 'Apellidos'}
+                            jobTitle={this.state.form.jobTitle || 'Cargo'}
+                            email={this.state.form.email || 'Correo'}
+                            github={this.state.form.github || 'GitHub'}
                         />
                         </div>
                         <div className='col-6'>

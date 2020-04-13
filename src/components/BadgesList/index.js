@@ -1,8 +1,21 @@
 import React from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 function BadgesList(props){
-    return(
+
+  if(props.data.length === 0){
+    return (
+      <div>
+        <h3>No tienes ningun badges creado</h3>
+        <Link to="/badges/new">
+          Crear
+        </Link>
+      </div>
+    );
+  }  
+
+  return(
       <div>
         {props.data.map(item => {
         return(
