@@ -11,7 +11,7 @@ class BadgeNew extends React.Component {
         lastName: '',
         email: '',
         jobTitle: '',
-        github: '',
+        twitter: '',
     } };
     
     handleChange = e => {
@@ -35,7 +35,7 @@ class BadgeNew extends React.Component {
                             lastName={this.state.form.lastName || 'Apellidos'}
                             jobTitle={this.state.form.jobTitle || 'Cargo'}
                             email={this.state.form.email || 'Correo'}
-                            github={this.state.form.github || 'GitHub'}
+                            twitter={this.state.form.twitter || 'Twitter'}
                         />
                         </div>
                         <div className='col-6'>

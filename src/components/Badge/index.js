@@ -23,7 +23,7 @@ function Badge(props) {
 
       <div className="Badge__section-info">
         <h3>{props.jobTitle}</h3>
-        <div>{props.github}</div>
+        <div>@{props.twitter}</div>
       </div>
 
       <div className="Badge__footer">#develop</div>

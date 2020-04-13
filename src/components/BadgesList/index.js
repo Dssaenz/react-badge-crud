@@ -23,8 +23,8 @@ function BadgesList(props){
             <img src={item.avatarUrl} alt={item.firstName} className='Badge__image' />
             <div>
               <p className='Badge__list--name'>{item.firstName} {item.lastName}</p>
-              <i className='fab fa-github' />
-              <a href={`https://github.com/${item.github}`} className='Badge__social'>{item.github}</a>
+              <i className='fab fa-twitter' />
+              <a href={`https://twitter.com/${item.twitter}`} className='Badge__social'>{item.twitter}</a>
               <p className='Badge__list--git'>{item.jobTitle}</p>
             </div>
           </li>
