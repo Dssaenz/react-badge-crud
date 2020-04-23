@@ -31,6 +31,7 @@ const api = {
       // simular respuesta de error throw new Error('Not Found')
     },
     create(badge) {
+      // simular respuesta de error throw new Error('500: Server error')
       return callApi(`/badges`, {
         method: 'POST',
         body: JSON.stringify(badge),

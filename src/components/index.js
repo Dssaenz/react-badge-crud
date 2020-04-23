@@ -5,6 +5,7 @@ import BadgesList from './BadgesList';
 import Layout from './Layout';
 import Loading from './Loading';
 import PageError from './PageError';
+import Gravatar from './Gravatar';
 
 export {
     Header,
@@ -14,4 +15,5 @@ export {
     Layout,
     Loading,
     PageError,
+    Gravatar,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import logo from '../../resources/images/badge-header.svg';
-import avatar from '../../resources/images/avatar.jpg';
+import Gravatar from '../Gravatar';
 
 function Badge(props) {
   return (
@@ -11,9 +11,9 @@ function Badge(props) {
       </div>
 
       <div className="Badge__section-name">
-        <img
+        <Gravatar
           className="Badge__avatar"
-          src={avatar}
+          email={props.email}
           alt="Avatar"
         />
         <h1>
