@@ -67,13 +67,13 @@ class BadgeForm extends React.Component{
                         />
                     </div>
                     <div className='form-group'>
-                        <label>Twitter</label>
+                        <label>gitHub</label>
                         <input 
                             onChange={this.props.onChange}
                             className='form-control'
-                            name='twitter'
+                            name='gitHub'
                             type='text'
-                            value={this.props.formValues.twitter}
+                            value={this.props.formValues.gitHub}
                         />
                     </div>
                     <button onClick={this.handleClick} className='btn btn-primary'>

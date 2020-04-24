@@ -9,9 +9,9 @@ import {
 } from '../../components';
 
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
     state= {
-        loading: false,
+        loading: true,
         error: null,
         form: {
             firstName: '',
@@ -21,6 +21,22 @@ class BadgeNew extends React.Component {
             gitHub: '',
     } };
     
+    componentDidMount() {
+        this.fetchData()
+    }
+
+    fetchData = async e => {
+        this.setState({ loading: true, error: null})
+        try {
+            const data = await api.badges.read(
+                this.props.match.params.badgeId
+            )
+            this.setState({ loading: false, form: data})
+        } catch(error) {
+            this.setState({ loading: false, error: error})
+        }
+    }
+
     handleChange = e => {
         this.setState({
             form: {
@@ -42,7 +58,8 @@ class BadgeNew extends React.Component {
         try {
             // Se le pasan los datos iniciales del estado (form)
             // Se espera la petición a la api
-            await api.badges.create(this.state.form);
+            // Para obtener los datos del id en donde se encuentra se usa match.params
+            await api.badges.update(this.props.match.params.badgeId, this.state.form);
             // Se cambia el estado del loading a false
             this.setState({ loading: false })
             // En el caso de formulario creado se recibe una propiedad llamada history de react router,
@@ -87,7 +104,7 @@ class BadgeNew extends React.Component {
     }    
 };
 
-export default BadgeNew;
+export default BadgeEdit;
 
 
 
