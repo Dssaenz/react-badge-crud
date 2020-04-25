@@ -1,0 +1,30 @@
+.Navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1C3643;
+}
+
+.Navbar__brand {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+.Navbar__brand:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.Span__post--color {
+    font-size: 1rem;
+    margin-right: 4px;
+}
+
+.Span__badge--color {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.Navbar__brand--logo {
+    margin: 0 10px;
+}
