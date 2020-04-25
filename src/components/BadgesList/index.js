@@ -2,8 +2,7 @@ import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
-function BadgesList(props){
-
+function BadgesList(props) {
   if(props.data.length === 0){
     return (
       <div>
@@ -20,7 +19,7 @@ function BadgesList(props){
         {props.data.map(item => {
         return(
           <li key={item.id} className='Badge__list'>
-            <Link to={`/badges/${item.id}/edit`}>
+            <Link to={`/badges/${item.id}`}>
               <div>
                 <img src={item.avatarUrl} alt={item.firstName} className='Badge__image' />
                 <div>

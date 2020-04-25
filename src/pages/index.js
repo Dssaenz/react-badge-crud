@@ -3,6 +3,7 @@ import Badges from './Badges';
 import NotFound from './NotFound';
 import BadgeNew from './BadgeNew';
 import BadgeEdit from './BadgesEdit';
+import BadgesDetailContainer from './BadgeDetailContainer';
 
 export {
     Home,
@@ -10,4 +11,5 @@ export {
     NotFound,
     BadgeNew,
     BadgeEdit,
+    BadgesDetailContainer,
 };

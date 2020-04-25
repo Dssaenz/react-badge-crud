@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import logo from '../../resources/images/logo.svg';
 
-function Navbar(){
+function Navbar() {
     return(
         <div className='Navbar'>
             <a className='Navbar__brand' href='/'>
