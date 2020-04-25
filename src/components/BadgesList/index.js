@@ -1,11 +1,39 @@
-import React from 'react';
+// Uso de react hooks
+import React, { useState, useMemo } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
+// Función para filtrar todos badges
+function useSearchBadges(data) {
+  const [ query, handleQuery ] = useState('')
+  const [filterResults, setFilter] = useState(data)
+
+  useMemo(() => {
+    const result = data.filter(item => {
+      return `${item.firstName} ${item.lastName}`.toLowerCase().includes(query.toLowerCase())
+    });
+
+    setFilter(result)
+  }, [data, query]);
+
+  return { query, handleQuery, filterResults }
+}
+
 function BadgesList(props) {
-  if(props.data.length === 0){
+  const data = props.data;
+  const { query, handleQuery, filterResults } = useSearchBadges(data);
+
+  if(filterResults.length === 0){
     return (
       <div>
+        <div>
+          <label>El filtro</label>
+          <input 
+          value={query}
+          onChange={(e) => {
+            handleQuery(e.target.value)
+          }}/>
+        </div>
         <h3>No tienes ningun badges creado</h3>
         <Link to="/badges/new">
           Crear
@@ -16,7 +44,16 @@ function BadgesList(props) {
 
   return(
       <div>
-        {props.data.map(item => {
+        <div>
+          <label>El filtro</label>
+          <input 
+          value={query}
+          onChange={(e) => {
+            handleQuery(e.target.value)
+          }}/>
+        </div>
+        <ul>
+        {filterResults.map(item => {
         return(
           <li key={item.id} className='Badge__list'>
             <Link to={`/badges/${item.id}`}>
@@ -32,7 +69,8 @@ function BadgesList(props) {
             </Link>
           </li>
         )
-        })}
+      })}
+      </ul> 
       </div>
     );
 }

@@ -7,6 +7,8 @@ import Loading from './Loading';
 import PageError from './PageError';
 import Gravatar from './Gravatar';
 import BadgeDetail from './BadgeDetail';
+import Modals from './Modals';
+import DeleteBadgeModal from './DeleteBadgeModal';
 
 export {
     Header,
@@ -18,4 +20,6 @@ export {
     PageError,
     Gravatar,
     BadgeDetail,
+    Modals,
+    DeleteBadgeModal,
 };

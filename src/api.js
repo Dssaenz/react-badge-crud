@@ -46,7 +46,7 @@ const api = {
         body: JSON.stringify(updates),
       });
     },
-    // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
+    // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :v
     remove(badgeId) {
       return callApi(`/badges/${badgeId}`, {
         method: 'DELETE',

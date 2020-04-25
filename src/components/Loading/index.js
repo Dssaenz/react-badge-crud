@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 function Loading() {
     return(
         <div className='PageLoading'>
-            <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+            <Loader type="Circles" color="#00BFFF" height={80} width={80} />
         </div>
     )
 }
