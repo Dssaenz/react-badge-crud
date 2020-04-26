@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter,Switch, Route } from 'react-router-dom'; 
+import { BrowserRouter,Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import {
     Home,
     Badges,
@@ -9,22 +10,25 @@ import {
     BadgesDetailContainer,
 } from './pages';
 import { Layout } from './components';
+import theme from './themes';
 
 function App() {
-    return(
-    <BrowserRouter>
+  return(
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
         <Layout>
-            <Switch>
-                <Route exact path='/badges' component={Badges} />
-                <Route exact path='/badges/new' component={BadgeNew} />
-                <Route exact path='/badges/:badgeId' component={BadgesDetailContainer} />
-                <Route exact path='/badges/:badgeId/edit' component={BadgeEdit} />
-                <Route exact path='/' component={Home} />
-                <Route path='/notFound' component={NotFound} /> 
-            </Switch>
+          <Switch>
+            <Route path='/notFound' component={NotFound} /> 
+            <Route exact path='/' component={Home} />
+            <Route exact path='/badges' component={Badges} />
+            <Route exact path='/badges/new' component={BadgeNew} />
+            <Route exact path='/badges/:badgeId/edit' component={BadgeEdit} />
+            <Route exact path='/badges/:badgeId' component={BadgesDetailContainer} />
+          </Switch>
         </Layout>
-    </BrowserRouter>
-    )
+    </ThemeProvider>
+  </BrowserRouter>
+  )
 }
 
 export default App;

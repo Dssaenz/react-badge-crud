@@ -9,6 +9,8 @@ import Gravatar from './Gravatar';
 import BadgeDetail from './BadgeDetail';
 import Modals from './Modals';
 import DeleteBadgeModal from './DeleteBadgeModal';
+import Button from './Button';
+import LinkRoute from './LinkRoute';
 
 export {
     Header,
@@ -22,4 +24,6 @@ export {
     BadgeDetail,
     Modals,
     DeleteBadgeModal,
+    Button,
+    LinkRoute,
 };
