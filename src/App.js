@@ -16,7 +16,6 @@ function App() {
   return(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
-        <Layout>
           <Switch>
             <Route path='/notFound' component={NotFound} /> 
             <Route exact path='/' component={Home} />
@@ -25,7 +24,6 @@ function App() {
             <Route exact path='/badges/:badgeId/edit' component={BadgeEdit} />
             <Route exact path='/badges/:badgeId' component={BadgesDetailContainer} />
           </Switch>
-        </Layout>
     </ThemeProvider>
   </BrowserRouter>
   )

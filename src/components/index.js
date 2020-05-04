@@ -11,6 +11,7 @@ import Modals from './Modals';
 import DeleteBadgeModal from './DeleteBadgeModal';
 import Button from './Button';
 import LinkRoute from './LinkRoute';
+import BadgeCard from './BadgeCard';
 
 export {
     Header,
@@ -26,4 +27,5 @@ export {
     DeleteBadgeModal,
     Button,
     LinkRoute,
+    BadgeCard,
 };

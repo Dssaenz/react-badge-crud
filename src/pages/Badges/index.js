@@ -1,8 +1,17 @@
 import React from 'react';
-import { BadgesList, Loading, PageError } from '../../components';
-import './styles.css';
-import confLogo from '../../resources/images/badge-header.svg';
-import { Link } from 'react-router-dom';
+import {
+  PrincipalContainer,
+  ContentImage,
+  Image,
+  SectionText,
+  Text,
+  Wrapper,
+  CircleLeftTop,
+  CircleRightBottom,
+  CircleRightTop,
+} from './styles';
+import { BadgesList, Loading, PageError, LinkRoute } from '../../components';
+import person from '../../resources/images/Badge_Trofeo.png';
 import api from '../../api';
 
 class Badges extends React.Component{  
@@ -45,25 +54,21 @@ class Badges extends React.Component{
         };
 
         return(
-        <React.Fragment>
-            <div className='Badges'>
-                <div className='Badges__hero'>
-                    <div className='Badges__container'>
-                        <img className='Badges_conf-logo' src={confLogo} alt='name' />
-                    </div>
-                </div>
-            </div>
-            <div className='Badge__container'>
-                <div className='Badges__buttons'>
-                    <Link to='/badges/new' className='btn btn-primary'>New Badge</Link>
-                </div>
-                <div className='Badges__list'>
-                    <div className='Badges__container'>
-                        <BadgesList data={this.state.data} />
-                    </div>
-                </div>
-            </div>
-        </React.Fragment>
+        <PrincipalContainer>
+          <CircleLeftTop />
+          <ContentImage>
+            <Image src={person}/>
+            <SectionText>
+              <Text>Crea un Badge para cualquier integrante de tu equipo de trabajo.</Text>
+              <LinkRoute link={'/badges/new'} name="Nuevo Badge" /> 
+            </SectionText>
+          <CircleRightBottom />
+          </ContentImage>
+          <Wrapper>
+            <BadgesList data={this.state.data} />
+          </Wrapper>
+          <CircleRightTop />
+        </PrincipalContainer>
         );
     } 
 }

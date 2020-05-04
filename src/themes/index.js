@@ -24,7 +24,7 @@ const theme = {
     h4: '1.5rem',
     h5:'1rem',
     btn: '',
-    p: '',
+    p: '15px',
     pd: '',
     pds: '',
   }
